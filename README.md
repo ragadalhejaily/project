@@ -1,6 +1,6 @@
 # Essential Steps for Designing Accurate Football Player Performance Analysis from Videos.
 ## Authors
-
+- [@ragadalhejaily](https://www.github.com/ragadalhejaily)
 - [@rahafalhejaily](https://www.github.com/rahafalhejaily)
 - [@Maie667](https://www.github.com/Maie667)
 - [@ShareefahAlessa](https://www.github.com/ShareefahAlessa)
