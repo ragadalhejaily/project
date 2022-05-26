@@ -9,7 +9,6 @@
 The dataset contains 6,197 images each image has its annotation files
 ### Dataset for other models 
 The dataset contains 10216 images from numbers 0 to 99, each folder contains images of a specific number and the name of the folder is label for the images. 
-#### To use our dataset, it is in the Dataset folder.
 ## Running the code
 Run the code :  `python main.py --videos path of video`
 
