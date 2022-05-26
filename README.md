@@ -1,4 +1,4 @@
-#  paper title" Essential Steps for Designing Accurate Football Player Performance Analysis from Videos".
+# The paper title" Essential Steps for Designing Accurate Football Player Performance Analysis from Videos".
 ## Authors
 - [@ragadalhejaily](https://www.github.com/ragadalhejaily)
 - [@rahafalhejaily](https://www.github.com/rahafalhejaily)
