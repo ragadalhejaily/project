@@ -53,7 +53,6 @@ def select_sample_from_frames(frames, n=100):
     return random.sample(frames, n)
 
 
-# In[8]:
 
 
 '''
@@ -125,13 +124,6 @@ def detect_persons_in_one_frame_for_k_mean(frame):
 
 
 
-
-
-
-
-
-
-
 def yolov5 (img):
     im=array_to_img(img)
     output = model(im)
@@ -191,9 +183,6 @@ def detect_persons_in_one_frame_for_k_mean_pridectwithyolov5(frame):
     outs = yolov3.forward(output_layers)
     image22=[]
     boxes = []
-    boxes2 = []
-    lisid=[]
-    T1=[]
     confidences = []
     classIDs = []
     crop=[]
@@ -288,15 +277,7 @@ def detect_persons_in_one_frame_for_k_mean_pridectwithyolov5(frame):
                         cv2.rectangle(frame, (x4, y4), (x4 + w4, y4+ h4), (0,0,0), 2)
                         cv2.putText(frame,label,(x4,y4),font,1,(0,0,0),2) 
                             
-                    if clusters[k]==counter.most_common()[3][0]:
-                        x1,y1,w1,h1=person[k]
-                        crop_img2 = frame[y1:y1+h1, x1:x1+w1]
-                        label="other "
-
-
-                        cv2.putText(frame,label,(x1,y1),font,1,(0,0,0),2)
-                        cv2.rectangle(frame, (x1, y1), (x1 + w1, y1 + h1), (0,0,0), 2)
-    
+                    
     return frame
 
 
@@ -373,7 +354,6 @@ ballmodel=torch.hub.load('ultralytics/yolov5', 'custom',path='/Users/ragadalheja
 ballmodel.load_state_dict(torch.load('/Users/ragadalhejaily/Documents/finalproject/code/last_project_code/models/balldetection640_100epoch.pt')['model'].state_dict(),strict=False)
 print("[INFO] train kmeans for team recognation . ")
 
-
 capture =read_video(args.videos)
 # select_sample_from_frames for train kmeans
 sample_of_frames=select_sample_from_frames(capture,n=100)
@@ -396,7 +376,6 @@ for frame in sample_of_frames:
         training_X_for_Kmean=np.concatenate((training_X_for_Kmean, newarr))
     count=count+1
     
-
 '''
  Apply k-means algorithm
 '''
@@ -405,10 +384,11 @@ intermediate_layer_model=Model(inputs=loaded_model.input,outputs=
 representation = intermediate_layer_model.predict(training_X_for_Kmean)
 representation = representation.reshape(representation.shape[0], -1)
 
-kmeans = KMeans(n_clusters = 4,random_state=0).fit(representation)
+kmeans = KMeans(n_clusters = 3,random_state=0).fit(representation)
 from collections import Counter, defaultdict
 counter=Counter(kmeans.labels_)
 most_common_element = counter.most_common()
+
 main(args.videos)
 
 
