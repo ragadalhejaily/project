@@ -1,4 +1,4 @@
-# The paper title" Ball and Player Detection, Team Assignment & Jersey Number Recognition for Analyzing Football Videos".
+# The paper title" Automatic Team Assignment and Jersey Number Recognition in Football Videos".
 ## Authors
 - [@ragadalhejaily](https://www.github.com/ragadalhejaily)
 - [@rahafalhejaily](https://www.github.com/rahafalhejaily)
