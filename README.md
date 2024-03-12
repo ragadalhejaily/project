@@ -7,7 +7,7 @@
 - [@salehalbelwi](https://www.github.com/salehalbelwi)
   
   ## yolov3 weights:
-  -The weight at  https://drive.google.com/drive/folders/17dFDnxyUwG7BpYIH9HHdG6z4NMe3UAUa?usp=sharing
+  - The weight at  https://drive.google.com/drive/folders/17dFDnxyUwG7BpYIH9HHdG6z4NMe3UAUa?usp=sharing
 ## Dataset
 ### Dataset for YOLOv5 
 The dataset contains 6,197 images each image has its annotation files .  
